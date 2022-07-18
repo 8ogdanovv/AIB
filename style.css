@@ -198,7 +198,7 @@ ul {
     flex-direction: row !important;
     justify-content: center;
     align-items: center;
-    width: fit-content;
+    min-width: 11ch;
     flex-wrap: wrap;
 }
 
@@ -206,8 +206,8 @@ ul {
     display: inline-block;
     display: flex;
     flex-direction: row-reverse;
-    height: 7vw;
-    width: 12vw;
+    height: 10vw;
+    width: 15vw;
     justify-content: center;
     align-items: center;
 }
