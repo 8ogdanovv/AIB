@@ -12,11 +12,36 @@ p,
 a,
 .block {
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
+
+/* div {
+    display: flex;
+    flex-direction: column;
+} */
 
 /* .cv {
     opacity: 0.5;
 } */
+
+.project_scratch {
+    width: 68vw;
+    height: auto;
+}
+
+#project_scr {
+    width: 100%;
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-items: auto;
+}
+
+.project_scr_IMG {
+    width: 30%;
+    height: auto;
+}
 
 @media only screen and (orientation: landscape) {
 
@@ -202,10 +227,7 @@ a,
     }
 }
 
-div {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .cv * {
     font-size: 110%;
