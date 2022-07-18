@@ -32,12 +32,12 @@ a,
     }
 
     #h1 {
-        height: 3vw;
-        width: 27vw;
+        height: 3ch;
+        width: 27ch;
     }
 
     #h1:hover {
-        height: 3.5vw;
+        height: 3.5ch;
     }
 
     h2:hover,
@@ -46,7 +46,7 @@ a,
     a:hover,
     li:hover {
         display: inline-block;
-        max-width: 65vw;
+        max-width: 65ch;
         color: white;
         background-color: green;
         box-shadow: 0 0 1.5rem 1rem green;
@@ -56,12 +56,12 @@ a,
 
     h3 {
         display: block;
-        width: 33vw;
+        width: 63vw;
     }
 
     .cv {
         position: fixed;
-        max-width: 33vw;
+        max-width: 33ch;
         right: 0;
         top: 0;
         border: 1px solid green;
@@ -109,7 +109,7 @@ a,
     }
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 720px) {
 
     body {
         font-size: 90%;
