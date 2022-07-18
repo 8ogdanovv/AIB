@@ -30,18 +30,66 @@ h1 {
 #h1:hover {
     height: 3.5vw;
 }
+@media screen and (min-width: 1220px) {
 
-.cv {
-    position: fixed;
-    max-width: 33vw;
-    /* max-height: 75vh; */
-    right: 0;
-    top: 0;
-    /* background-color: green; */
-    border: 1px solid green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .cv {
+        position: fixed;
+        max-width: 33vw;
+        /* max-height: 75vh; */
+        right: 0;
+        top: 0;
+        /* background-color: green; */
+        border: 1px solid green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .block {
+        margin: 1vw;
+        width: 66%;
+        border: 1px solid green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* flex-wrap: wrap; */
+        
+    }
+    
+    
+}
+
+@media screen and (max-width: 1220px) {
+
+    .cv {
+        position: fixed;
+        /* max-width: 33vw; */
+        /* max-height: 75vh; */
+        left: 0;
+        bottom: 0;
+        /* background-color: green; */
+        border: 1px solid green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        z-index: 5;
+        
+    }
+
+    .block {
+        margin: 1vw;
+        width: 90%;
+        border: 1px solid green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* flex-wrap: wrap; */
+        
+    }
+    
+    
     
 }
 
@@ -63,16 +111,7 @@ div {
     flex-direction: column;
 }
 
-.block {
-    margin: 1vw;
-    width: 66%;
-    border: 1px solid green;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* flex-wrap: wrap; */
-    
-}
+
 
 .cv * {
     font-size: 110%;
