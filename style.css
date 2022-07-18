@@ -1,6 +1,6 @@
 body {
     font-size: 110%;
-    width: 98%;
+    width: 100%;
     overflow-x: hidden;
     text-align: center;
 }
@@ -14,14 +14,16 @@ a,
     text-align: center;
 }
 
-
+/* .cv {
+    opacity: 0.5;
+} */
 
 @media only screen and (orientation: landscape) {
 
 
     body {
         font-size: 110%;
-        width: 98%;
+        width: 100%;
         overflow-x: hidden;
         text-align: center;
     }
@@ -60,10 +62,10 @@ a,
     }
 
     .cv {
-        position: fixed;
-        max-width: 33ch;
-        right: 0;
-        top: 0;
+        position: relative;
+        max-width: 100%;
+        /* right: 0;
+        top: 0; */
         border: 1px solid green;
         display: flex;
         justify-content: center;
@@ -73,7 +75,7 @@ a,
 
     .block {
         margin: 1vw;
-        width: 66%;
+        width: 100%;
         border: 1px solid green;
         display: flex;
         align-items: center;
@@ -81,7 +83,7 @@ a,
     }
 
     .phrase {
-        width: 65vw;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -113,20 +115,20 @@ a,
 
     body {
         font-size: 90%;
-        width: 98%;
+        width: 100%;
         overflow-x: hidden;
         text-align: center;
     }
 
-    .last {
+    /* .last {
         padding-bottom: 10rem;
-    }
+    } */
 
     .cv {
-        position: fixed;
-        width: 98vw;
-        left: 0;
-        bottom: 0;
+        position: relative;
+        width: 100%;
+        /* left: 0;
+        bottom: 0; */
         border: 1px solid green;
         display: flex;
         flex-direction: row;
@@ -134,12 +136,12 @@ a,
         align-items: center;
         background-color: #000;
         z-index: 5;
-        max-width: 98vw;
+        max-width: 100%;
     }
 
     .block {
         margin: 1vw;
-        width: 95%;
+        width: 100%;
         border: 1px solid green;
         display: flex;
         align-items: center;
@@ -147,7 +149,7 @@ a,
     }
 
     .phrase {
-        width: 98vw;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -170,6 +172,20 @@ a,
     h1:hover {
         display: inline-block;
         max-width: 25vw;
+        color: white;
+        background-color: green;
+        box-shadow: 0 0 1.5rem 1rem green;
+        border: 1px solid white;
+        cursor: pointer;
+    }
+
+    h2:hover,
+    h3:hover,
+    p:hover,
+    a:hover,
+    li:hover {
+        display: inline-block;
+        max-width: 65ch;
         color: white;
         background-color: green;
         box-shadow: 0 0 1.5rem 1rem green;

@@ -15,7 +15,7 @@ const SDC_run = function () {
 
 const SDC_wraper = document.createElement('div');
 SDC_wraper.classList.add('block');
-SDC_wraper.classList.add('last');
+// SDC_wraper.classList.add('last');
 document.body.appendChild(SDC_wraper);
 
 const SDC_text = document.createElement('h2');
