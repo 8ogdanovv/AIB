@@ -51,6 +51,10 @@ function reset_logo_bg() {
   for (let i = 0; i < 2500; i++) {
     let dot = document.getElementById(`${i}`);
     dot.style.backgroundColor = 'black';
+    if (dot.classList.contains('shadowed')) {
+      dot.classList.remove('shadowed');
+    }
+    
   }
 }
 
@@ -87,6 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let el = document.getElementById(`${id_map[j]}`);
     let el_ = document.getElementById(`${id_map[j]+1}`);
     el.style.backgroundColor = el_.style.backgroundColor = 'white';
+    el.classList.add('shadowed');
+    el_.classList.add('shadowed');
   }
 
   // function delay_200(o) {
@@ -102,20 +108,23 @@ const sleep = (milliseconds) => {
 }
 
 const doSomething = async () => {
+
   for (let j = 0; j < id_map.length; j++) {
   //code before sleep goes here, just change the time below in milliseconds
-  await sleep(200);
+  await sleep(150);
   paint_j(j);
   //code after sleep goes here 
     }
     // doSomething();
-    reset_logo_bg();
   }
 
 const loop_painting = setTimeout(()=>{
   setInterval(function(){
+
+    reset_logo_bg();
   doSomething();
-}, 19000);
+  
+}, 16000);
 }, 1);
 
 
