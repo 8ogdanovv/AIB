@@ -1,10 +1,3 @@
-document.body.style.width = '100%';
-document.body.style.height = '100%';
-document.body.style.display = 'flex';
-document.body.style.flexDirection = 'column';
-document.body.style.backgroundColor = 'black';
-document.body.style.color = 'white';
-
 const SDC_run = function () {
     let userName = prompt("\nHello!\nMy name is SolarDaysCalculator 2021.\nAnd what is your name?");
     let userYear = parseInt(prompt(userName + ", do You want to know how many days are You live on the Earth?!\nIf your answer \'yes\' - then type your birth year, like YYYY, and press ENTER, please."), 10);
