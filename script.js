@@ -111,7 +111,7 @@ const doSomething = async () => {
 
   for (let j = 0; j < id_map.length; j++) {
   //code before sleep goes here, just change the time below in milliseconds
-  await sleep(150);
+  await sleep(100);
   paint_j(j);
   //code after sleep goes here 
     }
@@ -124,7 +124,7 @@ const loop_painting = setTimeout(()=>{
     reset_logo_bg();
   doSomething();
   
-}, 16000);
+}, 12000);
 }, 1);
 
 
