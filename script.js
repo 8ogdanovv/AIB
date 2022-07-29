@@ -2,19 +2,12 @@ window.addEventListener('load', function () {
   setInterval(myTimer, 1000);
 });
 
-function myTimer() {
-  const d = new Date();
-  document.getElementById('timer').innerHTML = d.toLocaleTimeString();
-  document.getElementById('timer_2').innerHTML = d.toLocaleTimeString();
-}
-document.getElementById('timer_2').classList.add('mirrored');
-document.getElementById('text_2').classList.add('mirrored');
 
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('Message from Javascript:\nDOMContentLoaded');
 
-  let logo = document.getElementById('logo');
-  console.log(Math.min(parseInt(window.innerWidth), parseInt(window.innerHeight)) / 100);
+let logo = document.getElementById('logo');
+console.log(Math.min(parseInt(window.innerWidth), parseInt(window.innerHeight)) / 100);
+
+function make_logo_bg() {
   for (let i = 0; i < 2500; i++) {
     let dot = document.createElement('div');
     dot.id = `${i}`;
@@ -39,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       dot.innerText = ` `;
       dot.style.backgroundColor = 'black';
     // }
-
+  
     // if (i > 1200 && i < 1249 || i > 1250 && i < 1299 
     //   || i % 25 === 0 && i !== 25 && i % 50 !== 0 && i !== 2475
     //   || (i-1) % 25 === 0 && (i-1) !== 25 && (i-1) % 50 !== 0 && (i-1) !== 2475
@@ -47,8 +40,33 @@ document.addEventListener('DOMContentLoaded', () => {
     //   dot.innerText = ` `;
     //   dot.style.backgroundColor = 'gray';
     // }
-
+  
   }
+
+}
+
+make_logo_bg();
+
+function reset_logo_bg() {
+  for (let i = 0; i < 2500; i++) {
+    let dot = document.getElementById(`${i}`);
+    dot.style.backgroundColor = 'black';
+  }
+}
+
+
+function myTimer() {
+  const d = new Date();
+  document.getElementById('timer').innerHTML = d.toLocaleTimeString();
+  document.getElementById('timer_2').innerHTML = d.toLocaleTimeString();
+}
+document.getElementById('timer_2').classList.add('mirrored');
+document.getElementById('text_2').classList.add('mirrored');
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Message from Javascript:\nDOMContentLoaded');
+
+
 
   let id_map = [
     1512, 1462, 1412, 1362, 1312, 1262, 1212, 1162, 1112, 1062, 1012, 962, 912,
@@ -61,33 +79,62 @@ document.addEventListener('DOMContentLoaded', () => {
     1487, 1438, 1389, 1340, 1291, 1242, 1193, 1144, 1095, 1046, 997, 948     
   ];
 
-  for (let j in id_map) {
-    let el = document.getElementById(id_map[j]);
+  // for (let j = 0; j < id_map.length; j++) {
+  //      delay_200(j); 
+  // }
+
+  function paint_j(j) {
+    let el = document.getElementById(`${id_map[j]}`);
     let el_ = document.getElementById(`${id_map[j]+1}`);
     el.style.backgroundColor = el_.style.backgroundColor = 'white';
   }
-  // let selected = [];
-  // sessionStorage.setItem('selected', selected);
+
+  // function delay_200(o) {
+  //   setTimeout(function(){
+  //     paint_j(o);
+  //   }, 1000);
+  // }
+
+
+  //you can leave the sleep constant
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds));
+}
+
+const doSomething = async () => {
+  for (let j = 0; j < id_map.length; j++) {
+  //code before sleep goes here, just change the time below in milliseconds
+  await sleep(200);
+  paint_j(j);
+  //code after sleep goes here 
+    }
+    // doSomething();
+    reset_logo_bg();
+  }
+
+const loop_painting = setTimeout(()=>{
+  setInterval(function(){
+  doSomething();
+}, 19000);
+}, 1);
+
+
+doSomething();
 
   function click_handler(event) {
     let ET = event.target;
     if (ET.style.backgroundColor === 'white') {
-      ET.style.backgroundColor = 'green';
-      // let selected = [...sessionStorage.getItem('selected')].filter((el)=>{
-      //   return el !== null && !isNaN(el);
-      // });
-      // selected.push(ET.id);
-      // sessionStorage.setItem('selected', selected);
+      let myTimeout = setTimeout(()=>{
+        ET.style.backgroundColor = 'green';
+      }, 500);
     }
     else {
-      ET.style.backgroundColor = 'white';
-      // let selected = [...sessionStorage.getItem('selected')].valueOf.filter((el)=>{
-      //   return el !== null && !isNaN(el);
-      // });
-      // selected.delete(ET.id);
-      // sessionStorage.setItem('selected', selected);
+      let myTimeout = setTimeout(()=>{
+        ET.style.backgroundColor = 'white';
+      }, 500);
+
     }
-    // ET.removeEventListener('click');
+
   }
 
   logo.addEventListener('click', click_handler);
