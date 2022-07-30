@@ -12,6 +12,11 @@ body {
     text-align: center;
 }
 
+body * {
+    margin: 0;
+    padding: 0;
+}
+
 h1,
 h2,
 h3,
@@ -49,6 +54,8 @@ a,
 }
 
 #logo_wrapper {
+    margin-top: -25%;
+    margin-bottom: -25%;
     width: 100%;
     height: 100%;
     display: flex;
@@ -99,31 +106,40 @@ a,
 #text_2 {
     /* text-align: center; */
     /* width: 82%; */
-    height: 6vw;
-    font-size: 3vh;
+    /* height: 6vw; */
+    font-size: 7vh;
     font-weight: 900;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin: 1vw;
+    /* margin: 1vw; */
     /* align-items: center; */
     /* text-shadow: 1vh 1vh 1vh rgba(255, 255, 0, 1), -1vh -1vh 1vh rgba(0, 0, 255, 1), -1vh 1vh 1.5vh rgba(255, 165, 0, 1), 1vh -1vh 2vh rgb(0, 128, 0, 1); */
 }
 
 
 #main {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
+    height: 20%;
     display: flex;
     flex-direction: row;
-    background-color: darkgray;
-    opacity: 0.9;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 15px 15px whitesmoke;
+    /* background-color: rgb(49, 49, 49); */
+    opacity: 0.8;
 }
 
 #main * {
     color: white;
+}
+
+#main_menu * {
+    font-size: 5vh;
+    opacity: 0.5;
 }
 
 
@@ -191,9 +207,9 @@ a,
     }
 
     .block {
-        margin: 1vw;
-        width: 100%;
-        border: 1px solid green;
+        /* margin: 2%;
+        width: 96%; */
+        border: inset 1px solid green;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -214,7 +230,7 @@ a,
         background-color: green;
         box-shadow: 0 0 1.5rem 1rem green;
         /* color: black; */
-        border: 1px solid white;
+        border: inset 1px solid white;
         cursor: pointer;
     }
 
@@ -243,7 +259,7 @@ a,
     .cv {
         position: relative;
         width: 100%;
-        border: 1px solid green;
+        border: inset 1px solid green;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -254,7 +270,7 @@ a,
     }
 
     .block {
-        margin: 1vw;
+        /* margin: 1vw; */
         width: 100%;
         border: 1px solid green;
         display: flex;
@@ -406,7 +422,7 @@ h3 {
     margin-top: -1vw;
     background-color: white;
     color: #000;
-    border: 1px solid green;
+    border: inset 1px solid green;
     border-radius: 0.5vw;
     -webkit-border-radius: 0.5vw;
     -moz-border-radius: 0.5vw;
