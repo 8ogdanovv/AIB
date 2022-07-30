@@ -192,7 +192,7 @@ a,
         max-width: 65ch;
         color: white;
         background-color: green;
-        box-shadow: 0 0 1.5rem 1rem green;
+        box-shadow: 0 0 1.5rem 1rem whitesmoke;
         border: 1px solid white;
         cursor: pointer;
     }
@@ -205,7 +205,7 @@ a,
     .cv {
         position: relative;
         max-width: 100%;
-        border: 1px solid green;
+        box-shadow: inset 0 0 10px 10px whitesmoke;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -215,7 +215,7 @@ a,
     .block {
         /* margin: 2%;
         width: 96%; */
-        border: 1px solid white;
+        box-shadow: inset 0 0 10px 10px whitesmoke;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -234,9 +234,9 @@ a,
         width: 25vw;
         color: white;
         background-color: green;
-        box-shadow: 0 0 1.5rem 1rem green;
+        /* box-shadow: 0 0 1.5rem 1rem green; */
         /* color: black; */
-        border: inset 1px solid white;
+        box-shadow: inset 0 0 10px 10px green;
         cursor: pointer;
     }
 
@@ -278,7 +278,7 @@ a,
     .block {
         /* margin: 1vw; */
         width: 100%;
-        border: 1px solid green;
+        box-shadow: inset 0 0 10px 10px whitesmoke;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -306,7 +306,7 @@ a,
     }
 
     #h1:hover {
-        display: inline-block;
+        /* display: inline-block; */
         max-width: 25vw;
         color: white;
         background-color: green;
@@ -324,7 +324,7 @@ a,
         /* max-width: 65ch; */
         color: white;
         background-color: green;
-        box-shadow: 0 0 1.5rem 1rem green;
+        box-shadow: 0 0 1.5rem 1rem whitesmoke;
         border: 1px solid white;
         cursor: pointer;
     }
