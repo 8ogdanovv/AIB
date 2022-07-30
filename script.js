@@ -48,7 +48,7 @@ function myTimer() {
   document.getElementById('timer_2').innerHTML = d.toLocaleTimeString();
 }
 document.getElementById('timer_2').classList.add('mirrored');
-document.getElementById('text_2').classList.add('mirrored');
+// document.getElementById('text_2').classList.add('mirrored');
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Message from Javascript:\nDOMContentLoaded');
@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log(`id_map.length = ${id_map.length}`);
 
   function paint_j(j, cur_col) {
+    // cur_col = randRGB();
     let el = document.getElementById(`${id_map[j]}`);
     // let el_ = document.getElementById(`${id_map[j] + 1}`);
     el.style.backgroundColor = 
