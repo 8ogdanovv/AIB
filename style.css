@@ -3,6 +3,7 @@
     --side_75: min(75vw, 75vh);
     --s_div_50: calc((var(--side)/100)*2);
     --s_div_100: calc((var(--side)/100));
+    --s_div_12: calc((var(--side)/100)*12);
 }
 
 body {
@@ -40,6 +41,10 @@ a,
     height: auto;
 }
 
+#main_logo {
+    height: 7vh;
+}
+
 #project_scr {
     width: 100%;
     display: flex;
@@ -54,8 +59,8 @@ a,
 }
 
 #logo_wrapper {
-    margin-top: -25%;
-    margin-bottom: -25%;
+    /* margin-top: -25%;
+    margin-bottom: -25%; */
     width: 100%;
     height: 100%;
     display: flex;
@@ -68,7 +73,7 @@ a,
     /* width: 100%;
     height: 100vw; */
     /* --side: min(100vw, 100vh); */
-    height: var(--side);
+    height: var(--side_12);
     width: var(--side);
     /* margin-top: calc(5 * var(--s_div_50)); */
     display: flex;
@@ -161,10 +166,10 @@ a,
 
 @media only screen and (orientation: landscape) {
 
-    #logo_wrapper {
+    /* #logo_wrapper {
         margin-bottom: -10%;
         margin-top: -10%;
-    }
+    } */
 
     body {
         font-size: 110%;
