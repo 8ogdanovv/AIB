@@ -2,7 +2,7 @@
     --side: min(100vw, 100vh);
     --side_75: min(75vw, 75vh);
     --s_div_50: calc((var(--side)/100)*2);
-    --s_div_100: calc((var(--side)/100));
+    --s_div_100: calc(var(--side)/100);
     --s_div_12: calc((var(--side)/100)*12);
 }
 
@@ -83,26 +83,70 @@ a,
 }
 
 #logo div {
-    /* --side_div_100: min(100vw, 100vh) / 100;
-    height: var(--side_div_100);
-    width: var(--side_div_100); */
     margin: 0;
     padding: 0;
-    /* max-height: 1ch;
-    max-width: 1ch; */
     width: var(--s_div_50);
     height: var(--s_div_50);
     background-color: white;
-    /* border: 1px solid gray; */
+    /* transform: ; */
+    /* -webkit-transform:;
+    -moz-transform:;
+    -ms-transform:;
+    -o-transform:;  */
 }
 
+
+@keyframes AIB_bx-shdw {
+    0%   {
+        box-shadow: 0px 0px 24px 6px white;
+    }
+    25%  {
+        box-shadow: 0px 0px 12px 9px white;
+    }
+    50%  {
+        box-shadow: 0px 0px 6px 12px white;
+}
+    100% {
+        box-shadow: 0px 0px 24px 6px white;
+    }
+  }
+
+  @keyframes AIB_brdr_rds {
+    0%   {
+        border-radius: var(--s_div_100);
+        -webkit-border-radius: var(--s_div_100);
+        -moz-border-radius: var(--s_div_100);
+        -ms-border-radius: var(--s_div_100);
+        -o-border-radius: var(--s_div_100);
+}
+    25%  {
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+}
+    50%  {
+        border-radius: 0%;
+        -webkit-border-radius: 0%;
+        -moz-border-radius: 0%;
+        -ms-border-radius: 0%;
+        -o-border-radius: 0%;
+}
+    100% {
+        border-radius: var(--s_div_100);
+        -webkit-border-radius: var(--s_div_100);
+        -moz-border-radius: var(--s_div_100);
+        -ms-border-radius: var(--s_div_100);
+        -o-border-radius: var(--s_div_100);
+}
+  }
+
 .shadowed {
-    border-radius: var(--s_div_100);
-    -webkit-border-radius: var(--s_div_100);
-    -moz-border-radius: var(--s_div_100);
-    -ms-border-radius: var(--s_div_100);
-    -o-border-radius: var(--s_div_100);
-    box-shadow: 0px 0px 24px 6px white !important;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation-name: AIB_bx-shdw, AIB_brdr_rds;
+    animation-duration: 4s, 7s;
+    animation-iteration-count: infinite;
 }
 .main_timers {
     width: 33vw;
@@ -412,6 +456,14 @@ li>a:hover {
     -o-border-radius: 0.5vw;
 }
 
+img:hover {
+    box-shadow: 0 0 15px 15px whitesmoke;
+}
+
+button:hover {
+    box-shadow: 0 0 25px 25px salmon ;
+}
+
 p {
     display: inline-block;
     position: relative;
@@ -440,7 +492,7 @@ p, a {
 
 h3 {
     display: block;
-    margin-top: -1.5%;
+    margin-top: -0.75rem;
     /* padding-top: 2%; */
     background-color: white;
     color: #000;

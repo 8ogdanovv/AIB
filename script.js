@@ -31,7 +31,7 @@ function make_logo_bg() {
 make_logo_bg();
 
 function reset_logo_bg() {
-  let cur_col = randRGB();
+  // let cur_col = randRGB();
   cur_col = 'black';
   for (let i = 0; i < 650; i++) {
     let dot = document.getElementById(`${i}`);
@@ -107,9 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // cur_col = randRGB();
     let el = document.getElementById(`${min_AIB_id_map[j]}`);
     // let el_ = document.getElementById(`${id_map[j] + 1}`);
-    el.style.backgroundColor = 
-    // el_.style.backgroundColor = 
-    `${cur_col}`;
+    el.style.backgroundColor = `${cur_col}`;
+    // = el_.style.backgroundColor = 
+    
     el.classList.add('shadowed');
     // el_.classList.add('shadowed');
   }
