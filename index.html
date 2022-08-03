@@ -172,15 +172,15 @@
             justify-content: center;
             align-items: center;
             width: var(--side);
-            height: 30vh;
-            font-size: 150%;
+            height: 28vh;
+            font-size: 10vh;
         }
 
         #copy_rigths {
-            font-size: medium;
+            font-size: 3vh;
             font-weight: 900;
             width: 100vw;
-            height: 10vh;
+            height: 15vh;
         }
     </style>
 </head>
@@ -197,6 +197,14 @@
     </div>
 
     <script>
+
+        function myTimer() {
+            const d = new Date();
+            document.getElementById('timer').innerHTML = d.toLocaleTimeString();
+            document.getElementById('timer_2').innerHTML = d.toLocaleTimeString();
+        }
+        document.getElementById('timer_2').classList.add('mirrored');
+
         window.addEventListener('load', function () {
             setInterval(myTimer, 1000);
         });
@@ -206,10 +214,10 @@
         }
 
         function randRGB() {
-            let r = rand();
-            let g = rand();
-            let b = rand();
-            return `rgb(${r},${g},${b})`;
+            let r = rand().toString();
+            let g = rand().toString();
+            let b = rand().toString();
+            return 'rgb(' + r + ',' + g + ',' + b + ')';
         }
 
         let logo = document.getElementById('logo');
@@ -219,10 +227,10 @@
             cur_col = 'black';
             for (let i = 0; i < 650; i++) {
                 let dot = document.createElement('div');
-                dot.id = `${i}`;
+                dot.id = i.toString();
                 logo.appendChild(dot);
-                dot.innerText = ` `;
-                dot.style.backgroundColor = `${cur_col}`;
+                dot.innerText = '';
+                dot.style.backgroundColor = cur_col;
             }
         }
         make_logo_bg();
@@ -230,23 +238,16 @@
         function reset_logo_bg() {
             cur_col = 'black';
             for (let i = 0; i < 650; i++) {
-                let dot = document.getElementById(`${i}`);
-                dot.style.backgroundColor = `${cur_col}`;
+                let dot = document.getElementById(i.toString());
+                dot.style.backgroundColor = cur_col;
                 if (dot.classList.contains('shadowed')) {
                     dot.classList.remove('shadowed');
                 }
             }
         }
 
-        function myTimer() {
-            const d = new Date();
-            document.getElementById('timer').innerHTML = d.toLocaleTimeString();
-            document.getElementById('timer_2').innerHTML = d.toLocaleTimeString();
-        }
-        document.getElementById('timer_2').classList.add('mirrored');
+        window.addEventListener('DOMContentLoaded', () => {
 
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('Message from Javascript:\nDOMContentLoaded');
             document.body.style.margin = 0;
             document.body.style.padding = 0;
             let min_AIB_id_map = [
@@ -262,8 +263,8 @@
 
 
             function paint_j(j, cur_col) {
-                let el = document.getElementById(`${min_AIB_id_map[j]}`);
-                el.style.backgroundColor = `${cur_col}`;
+                let el = document.getElementById(min_AIB_id_map[j].toString());
+                el.style.backgroundColor = cur_col;
                 el.classList.add('shadowed');
             }
 
@@ -271,6 +272,7 @@
                 return new Promise(resolve => setTimeout(resolve, milliseconds));
             }
             const doSomething = async (cur_col) => {
+                document.getElementById('copy_rigths').style.setProperty('color', cur_col, 'important');
                 for (let j = 0; j < min_AIB_id_map.length; j++) {
                     await sleep(100);
                     paint_j(j, cur_col);
@@ -284,7 +286,6 @@
                 setInterval(function () {
                     reset_logo_bg();
                     let cur_col = randRGB();
-                    document.getElementById('copy_rigths').style.setProperty('color', `${cur_col}`, 'important');
                     doSomething(cur_col);
                 }, 12000);
             }, 1);
