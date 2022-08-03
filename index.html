@@ -1,217 +1,311 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>☼ &#913☥&#914 ☽</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="icon" type="image/png" href="AIB_logo.png" sizes="128x128" />
-    <!-- <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>redirected</title>
+    <style>
+        :root {
+            --side: min(100vw, 100vh);
+            --side_75: min(75vw, 75vh);
+            --side_50: min(50vw, 50vh);
+            --side_25: min(25vw, 25vh);
+            --s_div_50: calc((var(--side)/100)*2);
+            --s_div_100: calc(var(--side)/100);
+            --s_div_12: calc((var(--side)/100)*12);
+            --s_div_20: calc((var(--side)/100)*20);
+            --s_div_25: calc((var(--side)/100)*25);
+            --s_div_33: calc((var(--side)/100)*33);
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 200%;
+            overflow: hidden;
+            text-align: center;
+            background-color: #000;
+        }
+
+        .centered {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mirrored {
+            display: block;
+            transform: scale(1, -1);
+            -webkit-transform: scale(1, -1);
+            -moz-transform: scale(1, -1);
+            -ms-transform: scale(1, -1);
+            -o-transform: scale(1, -1);
+            opacity: 0.5;
+            font-size: 100%;
+            text-shadow: 0 0 1vh whitesmoke;
+        }
+
+
+        #logo_wrapper {
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #logo {
+
+            height: var(--side_12);
+            width: var(--side);
+            display: flex;
+            flex-wrap: wrap;
+
+
+        }
+
+        #logo div {
+            margin: 0;
+            padding: 0;
+            width: var(--s_div_50);
+            height: var(--s_div_50);
+            background-color: white;
+        }
+
+        @keyframes AIB_shdw_txt {
+            0% {
+                text-shadow: 0px 0px 24px whitesmoke;
+            }
+
+            25% {
+                text-shadow: 0px 0px 12px whitesmoke;
+            }
+
+            50% {
+                text-shadow: 0px 0px 6px whitesmoke;
+            }
+
+            100% {
+                text-shadow: 0px 0px 24px whitesmoke;
+            }
+        }
+
+
+        @keyframes AIB_bx-shdw {
+            0% {
+                box-shadow: 0px 0px 24px 6px white;
+            }
+
+            25% {
+                box-shadow: 0px 0px 12px 9px white;
+            }
+
+            50% {
+                box-shadow: 0px 0px 6px 12px white;
+            }
+
+            100% {
+                box-shadow: 0px 0px 24px 6px white;
+            }
+        }
+
+        @keyframes AIB_brdr_rds {
+            0% {
+                border-radius: var(--s_div_100);
+                -webkit-border-radius: var(--s_div_100);
+                -moz-border-radius: var(--s_div_100);
+                -ms-border-radius: var(--s_div_100);
+                -o-border-radius: var(--s_div_100);
+            }
+
+            25% {
+                border-radius: 0px;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                -ms-border-radius: 0px;
+                -o-border-radius: 0px;
+            }
+
+            50% {
+                border-radius: 0%;
+                -webkit-border-radius: 0%;
+                -moz-border-radius: 0%;
+                -ms-border-radius: 0%;
+                -o-border-radius: 0%;
+            }
+
+            100% {
+                border-radius: var(--s_div_100);
+                -webkit-border-radius: var(--s_div_100);
+                -moz-border-radius: var(--s_div_100);
+                -ms-border-radius: var(--s_div_100);
+                -o-border-radius: var(--s_div_100);
+            }
+        }
+
+        .shadowed {
+            animation-name: AIB_bx-shdw, AIB_brdr_rds;
+            animation-duration: 4s, 7s;
+            animation-iteration-count: infinite;
+        }
+
+        .shadowed_txt {
+            animation-name: AIB_shdw_txt;
+            animation-duration: 11s;
+            animation-iteration-count: infinite;
+
+        }
+
+        #timer,
+        #timer_2 {
+            color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: var(--side);
+            height: 30vh;
+            font-size: 150%;
+        }
+
+        #copy_rigths {
+            font-size: medium;
+            font-weight: 900;
+            width: 100vw;
+            height: 10vh;
+        }
+    </style>
 </head>
 
-<body>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <header>
-        <div id="main">
-            <div class="main_timers">
-            <div id="timer"></div>
-            <div id="timer_2"></div>
-        </div>
-        <div id="main_text">
-            <img id="main_logo" src="AIB_logo_ua.png" alt="logo">
-            <!-- <span id="text">&#913 ☥ &#914</span>
-            
-            <span id="text_2">&#913 ☥ &#914</span> -->
-        </div>
+<body class="centered">
 
-            <div id="main_menu">
-                <span><b>menu</b></span>
-                <span class="mirrored">menu</span>
-                <!-- <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul> -->
-            </div>
-        </div>
+    <div id="timer" class="centered"></div>
+    <div id="logo_wrapper" class="centered" height="50%">
+        <div id="logo"></div>
     </div>
-    <div id="logo_wrapper">
-        <div id="logo">
-
-              <!-- <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-                <line height="500" width="500" x1="0" y1="0" x2="500" y2="500" stroke="red" />
-              </svg> -->
-
-        </div>
+    <div id="timer_2" class="centered"></div>
+    <div id="copy_rigths" class="shadowed_txt">
+        &copy; 2022 Vadym <i>Alex-Briz</i> Chervoniak
     </div>
-        <script src="./script.js"></script>
-        <!-- <div class="phrase">
-            <h2 style="letter-spacing: 0.5vw;">&#9830 &#9829 <i><a
-                        href="https://www.w3schools.com/html/html_symbols.asp">in</a></i> &#9856; &#9857; <i><b><a
-                            href="https://www.w3.org/">IT</a></b></i> &#9860; &#9861; <i>we trust</i> &#9827 &#9824</h2>
-        </div> -->
-    </header>
-    <div class="block" id="icons">
-        <h3><b>TOOL#BOX</b></h3>
-        <ul>
-            <li><a href="https://code.visualstudio.com/"><img class="icon"
-                        src="./icons/Visual_Studio_Code_1.35_icon.svg.png">Visual Studio Code</a></li>
-            <li><a href="https://developer.chrome.com/docs/devtools/"><img class="icon"
-                        src="./icons/chromium.png">Chrome DevTools</a></li>
-            <li><a href="https://html.spec.whatwg.org/"><img class="icon" src="./icons/html-5.png">HTML5</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/CSS#CSS_3"><img class="icon"
-                        src="./icons/css3-9-1175237.webp">CSS3</a></li>
-            <li><a href="https://262.ecma-international.org/6.0/"><img class="icon"
-                        src="./icons/Ecma_RVB-003.jpg">ES6</a></li>
-            <li><a href="https://sass-lang.com/"><img class="icon" src="./icons/logo-b6e1ef6e.svg">SASS</a></li>
-            <li><a href="https://github.com/stylus/stylus/blob/master/docs/compare.md"><img class="icon"
-                        src="./icons/scss-3-236294.webp">SCSS</a></li>
-            <li><a href="https://learn.javascript.ru/"><img class="icon" src="./icons/js.png">JavaScript</a></li>
-            <li><a href="https://www.typescriptlang.org/"><img class="icon"
-                    src="./icons/typescript-1174965.webp">TypeScript</a></li>
-            <li><a href="https://www.python.org/"><img class="icon"
-                        src="./icons/2048px-Python-logo-notext.svg.png">Python</a></li>
-            <li><a href="#"><img class="icon" src="./icons/695px-C_Programming_Language.svg.png">C</a> </li>
-            <li><a href="https://www.java.com/en/"><img class="icon" src="./icons/226777.png">Java</a></li>
-            <li><a href="https://angular.io/"><img class="icon" src="./icons/3h5gjh43gj5hhg43j-1.png">Angular</a> </li>
-            <li><a href="https://en.reactjs.org/"><img class="icon" src="./icons/React-icon.svg.png">React</a></li>
-            <li><a href="https://flask.palletsprojects.com/en/2.1.x/"><img class="icon"
-                        src="./icons/flask.jpg">Flask</a> </li>
-            <li><a href="https://www.djangoproject.com/"><img class="icon"
-                        src="./icons/django-logo-negative.png">Django</a></li>
-            <li><a href="https://eslint.org/"><img class="icon"
-                        src="./icons/cd7f2e77-553b-4be4-8df2-cb9ed8dcbe4d-logo.png">ESLint</a></li>
-            <li><a href="https://pypi.org/project/pylint/"><img class="icon" src="./icons/logo.png">Pylint</a></li>
-            <li><a href="https://nodejs.org/en/"><img class="icon" src="./icons/1200px-Node.js_logo.svg.png">Nodejs</a>
-            </li>
-            <li><a href="https://www.npmjs.com/"><img class="icon" src="./icons/540px-Npm-logo.svg.png">npm</a></li>
-            <li> <a href="https://pypi.org/"><img class="icon" src="./icons/PyPI_logo.svg.png">pip</a></li>
-            <li><a href="https://git-scm.com/"><img class="icon" src="./icons/Git_icon.svg.png">Git</a></li>
-            <li><a href="https://github.com/"><img class="icon"
-                        src="./icons/github-logo-5F384D0265-seeklogo.com.png">Github</a></li>
-            <li><a href="https://www.microsoft.com/uk-ua/windows"><img class="icon"
-                        src="./icons/Windows_logo_-_2012.svg.png">Windows</a>
-            <li><a href="https://linuxfoundation.org/linux-2/"><img class="icon" src="./icons/Tux.svg.png">Linux</a>
-            </li>
-            <li><a href="https://www.gnu.org/software/bash/manual/bash.html"><img class="icon"
-                        src="./icons/Bash_Logo_Colored.svg.png">Bash</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Comparison_of_command_shells"><img class="icon"
-                        src="./icons/PowerShell_Core_6.0_icon.png">CLI</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/SQL_syntax"><img class="icon"
-                        src="./icons/Sql_data_base_with_logo.png">SQL</a></li>
-            <li><a href="https://jsonapi.org/"><img class="icon"
-                            src="./icons/JSON_vector_logo.svg.png">JSON</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Representational_state_transfer"><img class="icon"
-                        src="./icons/rest.png">REST</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/API"><img class="icon" src="./icons/60e85b27c7220.jpg">API</a>
-            </li>
-            <li><a href="https://www.postman.com/"><img class="icon" src="./icons/2893aede23f01bfcbd2319326bc96a6ed0524eba759745ed6d73405a3a8b67a8.png">Postman</a>
-            </li>
-            <li><a href="https://aws.amazon.com/"><img class="icon"
-                        src="./icons/1280px-Amazon_Web_Services_Logo.svg.png">AWS</a></li>
-            <li><a href="https://cloud.google.com/"><img class="icon"
-                        src="./icons/1200px-Google-cloud-platform-v2.svg.png">GCP</a></li>
-            <li><a
-                    href="https://en.wikipedia.org/wiki/Agile_software_development#The_Manifesto_for_Agile_Software_Development">
-            <img class="icon" src="./icons/Agile-method.png">Agile</a></li>
-            <li><a href="https://www.scrum.org/"><img class="icon" src="./icons/The-Scrum-Values.png">Scrum</a></li>
-            <li><a href="https://kanbaninstitute.com/"><img class="icon" src="./icons/4727387.png">Kanban</a></li>
-        </ul>
-    </div>
-    <div class="block">
-        <h3>EDUCATION</h3>
-        <p><a href="http://kpik.org.ua/">Kamianets-Podilskyi Vocational and Technical College
-                <br>of industry, business and information technology, Department of Electrification</p>
-        </a>
-        <p><a href="http://ptcsi.chnu.edu.ua/">Chernivtsi National University named after Yury Fedkovich, Department of
-                Physics
-            </a></p>
-        <h3>Courses:</h3>
-        <ul class="courses">
-            <li><a href="https://cs50.harvard.edu/web/2020/">cs50 - Web</a></li>
-            <li><a href="https://cs50.harvard.edu/ai/2020/">cs50 - AI</a></li>
-            <li><a href="https://pythoninstitute.org/pcap">Python cert</a></li>
-            <li><a href="https://www.freecodecamp.org/learn/">freeCodeCamp</a></li>
-            <li><a href="https://aws.amazon.com/training/learn-about/developer/?th=tile&tile=learnabout">AWS</a></li>
-            <li><a href="https://ai.google/education/">google ai</a></li>
-        </ul>
-    </div>
-    <div class="block">
-        <h3>EXPERIENCE</h3>
-        <p>I have experience working online as a rewriter-copywriter, call manager, customer support manager.</p>
-        <p>Currently, I am actively studying and looking for my appointment in the IT field.</p>
-        <div id="projects_scr">
-            <img class="project_scr_IMG" src="./portfolio/angular_simplicity.png">
-            <img class="project_scr_IMG" src="./portfolio/angular_simplicity_cli_template.png">
-            <img class="project_scr_IMG" src="./portfolio/angular_simplicity_routing.png">
-            <img class="project_scr_IMG" src="./portfolio/hw10_clicker1.png">
-            <img class="project_scr_IMG" src="./portfolio/hw10_clicker2.png">
-            <img class="project_scr_IMG" src="./portfolio/hw10_clicker3_local_storage.png">
-            <img class="project_scr_IMG" src="./portfolio/fireSnow_1.png">
-            <img class="project_scr_IMG" src="./portfolio/hw12_wordle_3.png">
-            <img class="project_scr_IMG" src="./portfolio/hw14_fetch2.png">
-        </div>
-        <p>HTML, CSS, JS, Nodejs, Python, Angular, Django, Flask.</p>
-        <p>I like to grow my technical and other skills, want to take a part in perspective industry and become a
-            professional full-stack web developer.
-        </p>
-        <a href="https://github.com/Alex-Briz">https://github.com/Alex-Briz</a>
-        <a href="https://gitlab.com/Alex-Briz">https://gitlab.com/Alex-Briz</a>
-    </div>
-    <div class="block">
-        <h3>ACHIEVEMENTS</h3>
-        <p>Project from scratch.</p>
-        <img class="project_scratch" src="./portfolio/photo_2022-07-19_00-13-38.jpg">
-        <img class="project_scratch" src="./portfolio/z_dices_and_dominos_4.png">
-        <p>I set myself the goal of understanding something that seems difficult at first glance and despite the
-            difficulties at the beginning - in the end I get a feeling of happiness from the ability to achieve the
-            goal. </p>
-        <p>My pet projects are on git-hub.
-        </p>
-    </div>
-
-    <script src="solarDaysCalculator.js"></script>
-    <script src="icons_processor.js"></script>
-
-    <footer>
-        <div id="cv" class="cv">
-            <div>
-                <div id="h1">Vadym Chervoniak</div>
-                <br>
-                <hr style="width: 100%;">
-                <div id="h2">JavaScript | Python
-                    <br><i>engineer</i> && <i>developer</i>
-                </div>
-            </div>
-            <div>
-                <p>Mobile:<br> +380 505 444 199</p>
-                <p>Email:<br> ua505444199@gmail.com</p>
-                <p>Telegram:<br> @Alex11Briz</p>
-                <!-- <p>LinkedIn:<br> https://www.linkedin.com/in/alex-briz-78948320b/</p> -->
-                <p>GitHub:<br> https://github.com/Alex-Briz/</p>
-                <p>Location:<br> Kyiv, Ukraine</p>
-            </div>
-    </footer>
 
     <script>
-//         document.body.style.width = '100%';
-// document.body.style.height = '100%';
-document.body.style.display = 'flex';
-document.body.style.flexDirection = 'column';
-document.body.style.backgroundColor = 'black';
-document.body.style.color = 'white';
+        window.addEventListener('load', function () {
+            setInterval(myTimer, 1000);
+        });
+
+        function rand(min = 0, max = 255) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function randRGB() {
+            let r = rand();
+            let g = rand();
+            let b = rand();
+            return `rgb(${r},${g},${b})`;
+        }
+
+        console.log(`rand() = ${rand()}`);
+
+        let logo = document.getElementById('logo');
+        let AIB_copy_rights = document.getElementById('copy_rights');
+
+        function make_logo_bg() {
+            cur_col = 'black';
+            for (let i = 0; i < 650; i++) {
+                let dot = document.createElement('div');
+                dot.id = `${i}`;
+                logo.appendChild(dot);
+                dot.innerText = ` `;
+                dot.style.backgroundColor = `${cur_col}`;
+            }
+        }
+        make_logo_bg();
+
+        function reset_logo_bg() {
+            cur_col = 'black';
+            for (let i = 0; i < 650; i++) {
+                let dot = document.getElementById(`${i}`);
+                dot.style.backgroundColor = `${cur_col}`;
+                if (dot.classList.contains('shadowed')) {
+                    dot.classList.remove('shadowed');
+                }
+            }
+        }
+
+        function myTimer() {
+            const d = new Date();
+            document.getElementById('timer').innerHTML = d.toLocaleTimeString();
+            document.getElementById('timer_2').innerHTML = d.toLocaleTimeString();
+        }
+        document.getElementById('timer_2').classList.add('mirrored');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Message from Javascript:\nDOMContentLoaded');
+            document.body.style.margin = 0;
+            document.body.style.padding = 0;
+            let min_AIB_id_map = [
+                612, 562, 512, 462, 412, 362, 312, 262, 212, 162, 112, 62, 12,
+                12, 61, 110, 159, 208, 257, 306, 355, 404, 453, 502, 551, 600,
+                552, 504, 456, 408, 360, 312, 264, 216, 168, 120, 72, 24,
+                24, 74, 124, 174, 224, 274, 324, 374, 424, 474, 524, 574, 624,
+                576, 528, 480, 432, 384, 336, 288, 240, 192, 144, 96,
+                48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36,
+                86, 136, 186, 236, 286, 336, 386, 436, 486, 536, 586, 636,
+                587, 538, 489, 440, 391, 342, 293, 244, 195, 146, 97, 48];
+
+
+
+            function paint_j(j, cur_col) {
+                let el = document.getElementById(`${min_AIB_id_map[j]}`);
+                el.style.backgroundColor = `${cur_col}`;
+                el.classList.add('shadowed');
+            }
+
+            const sleep = (milliseconds) => {
+                return new Promise(resolve => setTimeout(resolve, milliseconds));
+            }
+            const doSomething = async (cur_col) => {
+                for (let j = 0; j < min_AIB_id_map.length; j++) {
+                    await sleep(100);
+                    paint_j(j, cur_col);
+                }
+            }
+
+            let cur_col = randRGB();
+            doSomething(cur_col);
+
+            const loop_painting = setTimeout(() => {
+                setInterval(function () {
+                    reset_logo_bg();
+                    let cur_col = randRGB();
+                    document.getElementById('copy_rigths').style.setProperty('color', `${cur_col}`, 'important');
+                    doSomething(cur_col);
+                }, 12000);
+            }, 1);
+
+            function click_handler(event) {
+                let ET = event.target;
+                if (ET.style.backgroundColor === 'white') {
+                    let myTimeout = setTimeout(() => {
+                        ET.style.backgroundColor = 'green';
+                    }, 500);
+                }
+                else {
+                    let myTimeout = setTimeout(() => {
+                        ET.style.backgroundColor = 'white';
+                    }, 500);
+                }
+            }
+            logo.addEventListener('click', click_handler);
+        });
     </script>
 </body>
 
