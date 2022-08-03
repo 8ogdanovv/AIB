@@ -11,6 +11,8 @@ body {
     width: 100%;
     overflow-x: hidden;
     text-align: center;
+    background-color: #000;
+    color: whitesmoke;
 }
 
 body * {
