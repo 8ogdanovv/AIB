@@ -8,8 +8,6 @@ The AIB project is a web-based application showcasing various HTML, CSS, and Jav
 
 [![screenshot](https://github.com/vadym4che/AIB/blob/master/screenshot.png)](https://vadym4che.github.io/AIB/)
 
-You can access the live version of this project on GitHub Pages here: `<Insert Your GitHub Pages Link>`.
-
 ## HTML
 
 ### Unique Tags and Attributes Used
