@@ -1,4 +1,3 @@
-<details>
 <summary><b>AIB Project</b></summary>
 
 ## Overview
@@ -65,6 +64,4 @@ This project is open-source and is available under the MIT License, allowing for
 
 ## Author
 
-Vadym Chervoniak
-
-</details>
+(č) Vadym Chervoniak
