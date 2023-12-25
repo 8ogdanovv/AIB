@@ -189,9 +189,17 @@
             top: 0;
             left: 0;
         }
+        #logo {
+            position: relative;
+            box-shadow: 0 0 1rem #fff;
+        }
     </style>
     <script>
-        window.onload = () => document.title += '| © 2022 AIB';
+        window.onload = () => {
+            const YEAR = new Date().getFullYear()
+            document.title = `© ${YEAR} A<3B | vadym4che`
+            document.getElementById('year').innerHTML = YEAR
+        };
     </script>
 </head>
 
@@ -203,7 +211,7 @@
     </div>
     <div id="timer_2" class="centered"></div>
     <div id="copy_rigths" class="shadowed_txt">
-        &copy; 2022 Vadym <i>Alex-Briz</i> Chervoniak
+        &copy; <span id="year">2022</span> Vadym <i>vadym4che</i> Chervoniak
     </div>
 
     <script>
